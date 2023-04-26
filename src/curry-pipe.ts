@@ -69,9 +69,8 @@ const jamesGender = getUserProperty('james', 'gender');
 // etc...
 
 // CURRIED
-const getUserPropCurried = (user: string) => (property: string) => {
-  return getUserProperty(user, property);
-};
+const getUserPropCurried = (user: string) => (property: string) =>
+  getUserProperty(user, property);
 
 const getJamesProperty = getUserPropCurried('james');
 // or
